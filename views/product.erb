@@ -1,0 +1,18 @@
+<h3><p><%= @product.title %></p></h3>
+<br><img width="350" height="350" src=<%= @product.path_to_image %>>
+<h4><b>Price:</b> <%= @product.price %></h5>
+<h5><b>Discription:</b> <%= @product.discription %><h5>
+<h5><b>Size:</b> <%= @product.size %></h5>
+<% if @product.is_sweet==true %>
+	<h5><b>Sweet: </b><img width="20" height="20" src= <%='/images/yes.png' %>>
+<%	else %>
+	<h5><b>Sweet: </b><img width="20" height="20" src= <%='/images/no.png' %>>	
+<% end %>
+
+<% if @product.is_veg==true %>
+	<h5><b>Vegeterian: </b><img width="20" height="20" src= <%='/images/yes.png' %>>
+<%	else %>
+	<h5><b>Vegeterian: </b><img width="20" height="20" src= <%='/images/no.png' %>>	
+<% end %>
+
+

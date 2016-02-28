@@ -1,8 +1,16 @@
 <h2>Backery menu</h2>
 <h4>Here you can choose the fresh cakes, buns and macarons</h4>
-
+<% index=0 %>
 <% @products.each do |product| %>
-	<p>
-		<a href="/product/<%= product.id %>"><%= product.title %></a>
-	</p>
+	<% if index%3 == 0 %>
+			<div class="row">
+	<% end %>
+	<div class="col-xs-6 col-md-4"><br><b><a href="/product/<%= product.id %>"><%= product.title %></b>
+								<br><img width="250" height="250" src=<%= product.path_to_image %>></a>
+								<br>Price: <b><%= product.price %></b></div>
+	<% index=index+1 %>
+	<% if index%3==0 %>
+		</div>
+	<% end %>
+
 <% end %>

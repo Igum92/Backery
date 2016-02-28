@@ -38,3 +38,8 @@ end
 get '/contacts' do
   erb :contacts
 end
+
+get '/product/:id' do
+	@product= Product.find(params[:id])
+	erb :product
+end
