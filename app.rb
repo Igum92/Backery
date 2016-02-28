@@ -19,6 +19,7 @@ get '/about' do
 end
 
 get '/menu' do
+	@products = Product.order('created_at DESC')
 	erb :menu
 end
 

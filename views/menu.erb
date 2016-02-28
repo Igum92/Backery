@@ -1,2 +1,8 @@
 <h2>Backery menu</h2>
 <h4>Here you can choose the fresh cakes, buns and macarons</h4>
+
+<% @products.each do |product| %>
+	<p>
+		<a href="/product/<%= product.id %>"><%= product.title %></a>
+	</p>
+<% end %>
