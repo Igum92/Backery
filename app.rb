@@ -17,3 +17,23 @@ end
 get '/about' do
  	erb :about
 end
+
+get '/menu' do
+	erb :menu
+end
+
+get '/order' do
+  erb :order
+end
+
+get '/pay' do
+  erb :pay
+end
+
+get '/delivery' do
+  erb :delivery
+end
+
+get '/contacts' do
+  erb :contacts
+end
