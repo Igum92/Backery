@@ -6,11 +6,14 @@
 			<div class="row">
 	<% end %>
 	<div class="col-xs-6 col-md-4"><br><b><a href="/product/<%= product.id %>"><%= product.title %></b>
-								<br><img width="250" height="250" src=<%= product.path_to_image %>></a>
-								<br>Price: <b><%= product.price %></b></div>
+								<br><img width="250" height="250" src=<%= product.path_to_image%> class="img-rounded"></a>
+								<br>Price: <b><%= product.price %></b> rub.
+								<br>
+								<button type="button" class="btn btn-info btn-xs">Add to cart
+								 <img width="30" height="30" src= <%='/images/cart.png' %>></button>
+								</div>
 	<% index=index+1 %>
 	<% if index%3==0 %>
 		</div>
 	<% end %>
-
 <% end %>
