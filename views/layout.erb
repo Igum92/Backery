@@ -43,7 +43,14 @@
 			      <li><a href="/contacts">Contacts</a></li>
 			    </ul>
 			     <ul class="nav navbar-nav navbar-right">
-			     	<li> <li><a href="#">Cart (...)</a></li></li>
+			     	<li> 
+			     		<form action="/cart" method="post">
+
+			     		<input name="orders" type="text"/>
+
+			     		<input type="submit" class="btn btn-info btn-lg" value="Cart (...)">
+			     		</form>
+			     	</li>
 			     </ul>
 			  </div><!--/.nav-collapse -->
 			</nav>

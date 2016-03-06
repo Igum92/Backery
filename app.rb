@@ -15,6 +15,12 @@ get '/' do
 end
 
 get '/about' do
+	s=0
+	(0..10).each do |i|
+  	s=s+i
+  	end
+ 	
+
  	erb :about
 end
 
@@ -42,4 +48,8 @@ end
 get '/product/:id' do
 	@product= Product.find(params[:id])
 	erb :product
+end
+
+post '/cart' do
+  erb
 end
