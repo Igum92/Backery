@@ -19,12 +19,13 @@ function add_to_cart(id)
 	window.localStorage.setItem(key, x);
 console.log(key);
 	get_cart_size();
+
 }
 
 function get_cart_size()
 {
 	var localStorage=window.localStorage;
-	var sum = 0;
+	sum = 0;
 
 
 	for(var i=0, len=localStorage.length; i<len; i++) {
@@ -32,7 +33,7 @@ function get_cart_size()
 	    var value = localStorage[key];
 	    console.log(key + " => " + value);
 
-	    sum = sum + parseInt(value,10);
+	    sum = window.sum + parseInt(value,10);
 	}
 	console.log('in cart ' + sum +' cakes');
 }
