@@ -17,8 +17,14 @@ function add_to_cart(id)
 	x = x * 1 + 1;
 
 	window.localStorage.setItem(key, x);
-console.log(key);
-	get_cart_size();
+	update_orders_input();
+
+}
+
+function update_orders_input()
+{
+	var orders = get_cart_orders();
+	$('#orders_input').val(orders);
 
 }
 
