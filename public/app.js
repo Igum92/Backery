@@ -18,6 +18,8 @@ function add_to_cart(id)
 
 	window.localStorage.setItem(key, x);
 	update_orders_input();
+	
+	update_orders_button();
 
 }
 
@@ -26,6 +28,12 @@ function update_orders_input()
 	var orders = get_cart_orders();
 	$('#orders_input').val(orders);
 
+}
+
+function update_orders_button()
+{
+	var text = 'Cart(' + get_cart_size() + ')';
+	$('#orders_button').val(text);
 }
 
 function get_cart_size()
