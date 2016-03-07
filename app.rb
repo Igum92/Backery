@@ -51,5 +51,5 @@ get '/product/:id' do
 end
 
 post '/cart' do
-  erb
+  erb 'Hello!'
 end

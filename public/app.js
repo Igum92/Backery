@@ -28,12 +28,36 @@ function get_cart_size()
 	sum = 0;
 
 
-	for(var i=0, len=localStorage.length; i<len; i++) {
+	for(var i=0, len=localStorage.length; i<len; i++) 
+	{
 	    var key = localStorage.key(i);
 	    var value = localStorage[key];
-	    console.log(key + " => " + value);
 
-	    sum = window.sum + parseInt(value,10);
+	   if(key.indexOf('product_') == 0)
+	   {
+	   		sum = sum + value * 1;
+	   }
 	}
-	console.log('in cart ' + sum +' cakes');
+
+	return sum;
+}
+
+function get_cart_orders()
+{
+	var orders = '';
+
+
+	for(var i=0, len=localStorage.length; i<len; i++)
+	
+	{
+	   	var key = localStorage.key(i);
+	    var value = localStorage[key];
+	   
+	   if(key.indexOf('product_') == 0)
+	   {
+	   		orders = orders + key + '=' + value + ',';
+	   }
+	}
+
+	return orders;
 }
