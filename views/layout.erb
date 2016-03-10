@@ -46,7 +46,7 @@
 			     	<li> 
 			     		<form action="/cart" method="post">
 			     		<input id="orders_input" name="orders" type="hidden" />
-			     		<input id="orders_button" type="submit" class="btn btn-info btn-lg" value="Cart (...)"  />
+			     		<input id="orders_button" type="submit" class="btn btn-info btn-lg" value="Cart (...)" onclick="cart" />
 			     		</form>
 			     	</li>
 			     </ul>
@@ -61,6 +61,16 @@
 			</div>
 
 	</div>
+
+	<script type="text/javascript">
+
+	$(function() {
+		update_orders_input();
+		update_orders_button();
+	});
+
+
+	</script>
 
   </body>
 </html>

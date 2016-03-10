@@ -75,3 +75,12 @@ function get_cart_orders()
 
 	return orders;
 }
+
+function update_cart_page()
+{
+	var orders = get_cart_orders();
+	$('#cart_table').text(orders);
+
+	
+}
+
