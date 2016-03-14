@@ -12,8 +12,11 @@
 		height: 100%;
 		font-family: "helvetica neue", helvetica, arial, sans-serif;
 		font-size: 13px;
-		text-align: center;
 		/* background: #33 url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png');*/
+	}
+
+	h2 {
+		text-align: center;
 	}
 
 	ul {
