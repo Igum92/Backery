@@ -39,6 +39,7 @@ get '/pay' do
   erb :pay
 end
 
+
 get '/delivery' do
   erb :delivery
 end
@@ -53,7 +54,7 @@ get '/product/:id' do
 end
 
 post '/cart' do
-	@orders_input = params[:orders]
+	orders_input = params[:orders]
 	@items = parse_orders_input orders_input
 
 	@items.each do |item|
@@ -61,6 +62,7 @@ post '/cart' do
 	end
 	erb :cart
 end
+
 def parse_orders_input orders_input
 	s1 = orders_input.split(/,/)
 	arr = []
@@ -79,4 +81,10 @@ def parse_orders_input orders_input
 	end
 
 	return arr
+end
+
+post '/place_order' do
+	@o = Order.new params[:order]
+	@o.save
+	erb "Your order is acceped. Thank you"
 end

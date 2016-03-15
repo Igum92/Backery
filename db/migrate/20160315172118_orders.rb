@@ -5,7 +5,7 @@ class Orders < ActiveRecord::Migration
   		t.text :name
   		t.text :phone
   		t.text :address
-  		t.text :datestamp
+  		t.text :order_input
 
   		t.timestamps
 

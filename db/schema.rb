@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160315172118) do
     t.text     "name"
     t.text     "phone"
     t.text     "address"
-    t.text     "datestamp"
+    t.text     "order_input"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
