@@ -54,8 +54,8 @@ get '/product/:id' do
 end
 
 post '/cart' do
-	orders_input = params[:orders]
-	@items = parse_orders_input orders_input
+	@orders_input = params[:orders]
+	@items = parse_orders_input @orders_input
 
 	@items.each do |item|
 		item[0] = Product.find(item[0])
@@ -83,8 +83,20 @@ def parse_orders_input orders_input
 	return arr
 end
 
+def get_db
+	db = SQLite3::Database.new 'backery.db'
+	db.results_as_hash=true
+	return db
+end
+
 post '/place_order' do
 	@o = Order.new params[:order]
 	@o.save
 	erb "Your order is acceped. Thank you"
+end
+
+get '/showorders'do
+	db=get_db
+	@results = db.execute 'select * from Orders order by id desc'
+	erb :showorders                                     
 end
