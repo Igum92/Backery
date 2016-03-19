@@ -91,8 +91,7 @@ end
 
 post '/place_order' do
 	@o = Order.new params[:order]
-	@o.save
-	erb "Your order is acceped. Thank you"
+	erb :order_placed
 end
 
 get '/showorders'do
