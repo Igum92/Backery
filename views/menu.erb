@@ -1,5 +1,6 @@
 <h2>Backery menu</h2>
-<h4>Here you can choose the fresh cakes, buns and macarons</h4>
+<h4><p align="center">Here you can choose the fresh cakes, buns and macarons</p></h4>
+<div id="menu" >
 <% index=0 %>
 <% @products.each do |product| %>
 	<% if index%3 == 0 %>
@@ -17,7 +18,7 @@
 		</div>
 	<% end %>
 <% end %>
-
+</div>
 <script type="text/javascript">
 
 $(function() 
@@ -28,3 +29,6 @@ $(function()
 
 
 </script>
+
+
+
