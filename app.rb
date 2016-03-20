@@ -107,8 +107,8 @@ post '/place_order' do
 	erb :order_placed
 end
 
-get '/showorders'do
+get '/admin'do
 	db=get_db
 	@results = db.execute 'select * from Orders order by id desc'
-	erb :showorders                                     
+	erb :admin                                     
 end
